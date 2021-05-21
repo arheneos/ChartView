@@ -56,10 +56,10 @@ public struct LineChartView: View {
     
     public var body: some View {
         ZStack(alignment: .center){
-            RoundedRectangle(cornerRadius: 20)
+            RoundedRectangle(cornerRadius: 5)
                 .fill(self.colorScheme == .dark ? self.darkModeStyle.backgroundColor : self.style.backgroundColor)
                 .frame(width: frame.width, height: 240, alignment: .center)
-                .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 8 : 0)
+                .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 3 : 0)
             VStack(alignment: .leading){
                 if(!self.showIndicatorDot){
                     VStack(alignment: .leading, spacing: 8){
@@ -109,7 +109,7 @@ public struct LineChartView: View {
                     )
                 }
                 .frame(width: frame.width, height: frame.height)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .offset(x: 0, y: 0)
             }.frame(width: self.formSize.width, height: self.formSize.height)
         }
