@@ -20,9 +20,9 @@ public struct LineChartView: View {
     public var dropShadow: Bool
     public var valueSpecifier:String
     
-    @State private var touchLocation:CGPoint = .zero
-    @State private var showIndicatorDot: Bool = false
-    @State private var currentValue: Double = 2 {
+    @State public var touchLocation:CGPoint = .zero
+    @State public var showIndicatorDot: Bool = false
+    @State public var currentValue: Double = 2 {
         didSet{
             if (oldValue != self.currentValue && showIndicatorDot) {
                 HapticFeedback.playSelection()
